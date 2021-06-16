@@ -29,12 +29,12 @@ model = load_model('Weather_model_H_move_ocean_Estwind.h5')
 cls_list = ['Est_season_wind','H_move_ocean']
 
 # 辨識每一張圖
-pred = model.predict(x)[0]
-predictions=model.predict(x)
 for f in files:
     img = image.load_img(f, target_size=(128, 128))
     if img is None:
         continue
+    pred = model.predict(x)[0]
+    predictions=model.predict(x)
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis = 0)
     top_inds = pred.argsort()[::-1][:5]
