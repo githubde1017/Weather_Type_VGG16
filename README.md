@@ -1,2 +1,2 @@
 # Weather_Type_VGG16
-Machine Learning automatic of the weather pressure map of type in Taiwan.
+Apply machine learning of VGG16 (tensorflow) to classify the weather type of weather maps automatically.
