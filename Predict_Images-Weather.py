@@ -33,10 +33,10 @@ for f in files:
     img = image.load_img(f, target_size=(128, 128))
     if img is None:
         continue
-    pred = model.predict(x)[0]
-    predictions=model.predict(x)
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis = 0)
+    pred = model.predict(x)[0]
+    predictions=model.predict(x)
     top_inds = pred.argsort()[::-1][:5]
     print(f)
     for i in top_inds:
