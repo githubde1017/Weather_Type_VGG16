@@ -4,10 +4,10 @@
 # In[7]:
 
 
-from tensorflow.python.keras import backend as K
-from tensorflow.python.keras.models import load_model
-from tensorflow.python.keras.preprocessing import image
-from tensorflow.python.keras.preprocessing.image import  img_to_array, load_img
+from tensorflow.keras import backend as K
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import  img_to_array, load_img
 from PIL import Image
 import sys
 import numpy as np
@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 # In[8]:
 
 
-from tensorflow.python.keras.preprocessing.image import array_to_img
+from tensorflow.keras.preprocessing.image import array_to_img
 # 從參數讀取圖檔路徑
 files = glob( "Weather/test/*.[jJ][pP][gG]" )
 
